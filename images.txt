@@ -1,1 +1,4 @@
 gcr.io/ml-pipeline/visualization-server:2.0.0-alpha.3
+gcr.io/ml-pipeline/cache-server:2.0.0-alpha.3
+gcr.io/ml-pipeline/metadata-envoy:2.0.0-alpha.3
+gcr.io/ml-pipeline/viewer-crd-controller:2.0.0-alpha.3
