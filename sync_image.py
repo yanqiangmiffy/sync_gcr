@@ -21,7 +21,10 @@ def pull_image():
             sha256_name = name.split("@")
             new_name = sha256_name[0].split("/")[-1]
             tag = sha256_name[-1].split(":")[-1][0:6]
-            image = "kenwood/" + new_name + ":"+ tag
+            if ':' in new_name:
+                image = "kenwood/" + new_name + "-"+ tag
+            else:
+                image = "kenwood/" + new_name + ":"+ tag
             cmd = "docker tag {0}   {1}".format(name, image)
             subprocess.call("docker pull {}".format(name), shell=True)
             subprocess.run(["docker", "tag", name, image])
